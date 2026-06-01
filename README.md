@@ -20,3 +20,8 @@ View your app in AI Studio: https://ai.studio/apps/84a6607c-8f49-40d5-a574-bb2f7
    `npm run dev`
 
 # Bazinga
+
+## Deploy
+
+Este projeto é publicado automaticamente no GitHub Pages usando o GitHub Actions. A cada alteração enviada para a branch `main`, o workflow em `.github/workflows/deploy.yml` é acionado para fazer o build e o deploy.
+
