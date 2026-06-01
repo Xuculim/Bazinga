@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-background: #131315;
+  --color-on-background: #e5e1e4;
+  
+  --color-surface: #131315;
+  --color-surface-dim: #131315;
+  --color-surface-bright: #39393b;
+  --color-surface-container-lowest: #0e0e10;
+  --color-surface-container-low: #1b1b1d;
+  --color-surface-container: #201f21;
+  --color-surface-container-high: #2a2a2c;
+  --color-surface-container-highest: #353437;
+  --color-on-surface: #e5e1e4;
+  --color-on-surface-variant: #c7c4d7;
+  --color-inverse-surface: #e5e1e4;
+  --color-inverse-on-surface: #313032;
+  
+  --color-outline: #908fa0;
+  --color-outline-variant: #464554;
+  
+  --color-primary: #c0c1ff;
+  --color-on-primary: #1000a9;
+  --color-primary-container: #8083ff;
+  --color-on-primary-container: #0d0096;
+  --color-inverse-primary: #494bd6;
+  
+  --color-secondary: #9ce4ff;
+  --color-on-secondary: #003543;
+  --color-secondary-container: #00cffc;
+  --color-on-secondary-container: #005468;
+  
+  --color-tertiary: #dfc568;
+  --color-on-tertiary: #3b2f00;
+  --color-tertiary-container: #c2aa50;
+  --color-on-tertiary-container: #4c3e00;
+
+  --font-inter: 'Inter', sans-serif;
+  --font-manrope: 'Manrope', sans-serif;
+
+  --spacing-header: 80px;
+  --spacing-sidebar: 288px;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-background font-inter overflow-x-hidden antialiased;
+    background-image: 
+      radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 90% 80%, rgba(0, 207, 252, 0.08) 0%, transparent 50%);
+    background-attachment: fixed;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-[#1b1b1d]/40 backdrop-blur-[24px] border border-white/5;
+  }
+  
+  /* Required for the popup opacity rule */
+  .popup-panel {
+    @apply bg-[#131315]/95 backdrop-blur-xl border border-white/10 shadow-2xl;
+  }
+  
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
